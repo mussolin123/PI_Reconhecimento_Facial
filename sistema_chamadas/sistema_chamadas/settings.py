@@ -1,18 +1,13 @@
 from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-!1!=bo&o8fm)2!ow@%ve7w_7ugvqf2-*j9@&*fbqr@alscex!y'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -36,7 +31,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,11 +43,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'sistema_chamadas.urls'
 
-# Configuração das Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Garante que Django procura templates aqui
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Django procura templates aqui
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
