@@ -17,4 +17,7 @@ urlpatterns = [
     path('alunos/', views.alunos_index, name='alunos_index'),
     path('alunos/create/', views.alunos_create, name='alunos_create'),
     path('alunos/edit/<int:id>/', views.alunos_edit, name='alunos_edit'),
+    
+    # Views para user
+    path('api/users/', include('users.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
